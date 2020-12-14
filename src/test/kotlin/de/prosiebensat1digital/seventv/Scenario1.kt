@@ -4,7 +4,10 @@ import de.prosiebensat1digital.seventv.abilities.UseAMobileDevice
 import de.prosiebensat1digital.seventv.base.BaseTest
 import de.prosiebensat1digital.seventv.base.Constants.ORIGINALS_AND_EXCLUSIVES
 import de.prosiebensat1digital.seventv.base.Constants.WISSENSWERTES
-import de.prosiebensat1digital.seventv.questions.*
+import de.prosiebensat1digital.seventv.questions.GridTitle
+import de.prosiebensat1digital.seventv.questions.HomeButton
+import de.prosiebensat1digital.seventv.questions.HomeScreen
+import de.prosiebensat1digital.seventv.questions.OriginalsAndExclusives
 import de.prosiebensat1digital.seventv.tasks.*
 import net.serenitybdd.junit.runners.SerenityRunner
 import net.serenitybdd.screenplay.Actor

@@ -1,7 +1,5 @@
 package de.prosiebensat1digital.seventv.tasks
 
-import de.prosiebensat1digital.seventv.base.Constants
-import de.prosiebensat1digital.seventv.interactions.ScrollScrollable
 import de.prosiebensat1digital.seventv.questions.GridLayoutHasMoreThan20Cards
 import net.serenitybdd.screenplay.Actor
 import net.serenitybdd.screenplay.Performable

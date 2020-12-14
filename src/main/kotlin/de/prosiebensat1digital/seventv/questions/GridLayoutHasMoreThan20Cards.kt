@@ -3,7 +3,9 @@ package de.prosiebensat1digital.seventv.questions
 import de.prosiebensat1digital.seventv.targets.Targets
 import de.prosiebensat1digital.seventv.tasks.ScrollGridLayout
 import net.serenitybdd.core.Serenity
-import net.serenitybdd.screenplay.*
+import net.serenitybdd.screenplay.Actor
+import net.serenitybdd.screenplay.Question
+import net.serenitybdd.screenplay.SilentTask
 import org.openqa.selenium.WebElement
 
 class GridLayoutHasMoreThan20Cards : Question<Boolean> {

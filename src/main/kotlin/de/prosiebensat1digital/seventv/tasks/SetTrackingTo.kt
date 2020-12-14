@@ -1,7 +1,5 @@
 package de.prosiebensat1digital.seventv.tasks
 
-import de.prosiebensat1digital.seventv.base.Constants
-import de.prosiebensat1digital.seventv.interactions.ScrollScrollableToText
 import de.prosiebensat1digital.seventv.interactions.TapOn
 import de.prosiebensat1digital.seventv.targets.Targets
 import net.serenitybdd.core.steps.Instrumented

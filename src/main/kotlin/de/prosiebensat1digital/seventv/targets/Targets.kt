@@ -7,7 +7,6 @@ import de.prosiebensat1digital.seventv.base.Constants.ORIGINALS_AND_EXCLUSIVES
 import de.prosiebensat1digital.seventv.base.Constants.PACKAGE_ID
 import de.prosiebensat1digital.seventv.base.Constants.WISSENSWERTES
 import de.prosiebensat1digital.seventv.base.ScrollOrientation
-import de.prosiebensat1digital.seventv.questions.OriginalsAndExclusives
 import io.appium.java_client.MobileBy
 import net.serenitybdd.screenplay.targets.Target
 import org.openqa.selenium.WebDriver

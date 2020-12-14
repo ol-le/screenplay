@@ -1,13 +1,10 @@
 package de.prosiebensat1digital.seventv.questions
 
-import de.prosiebensat1digital.seventv.targets.Targets
-import io.appium.java_client.android.AndroidDriver
 import net.serenitybdd.screenplay.Actor
 import net.serenitybdd.screenplay.Question
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb
 import net.serenitybdd.screenplay.targets.Target
 import org.openqa.selenium.*
-import kotlin.NoSuchElementException
 
 
 class ElementIsOnScreen(private val element: Target) : Question<Boolean> {

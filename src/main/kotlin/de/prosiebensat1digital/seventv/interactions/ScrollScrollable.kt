@@ -1,16 +1,13 @@
 package de.prosiebensat1digital.seventv.interactions
 
-import de.prosiebensat1digital.seventv.base.Constants.PACKAGE_ID
 import de.prosiebensat1digital.seventv.base.ScrollDirection
 import de.prosiebensat1digital.seventv.base.ScrollOrientation
 import de.prosiebensat1digital.seventv.targets.Utils
-import io.appium.java_client.MobileBy
 import net.serenitybdd.core.steps.Instrumented
 import net.serenitybdd.screenplay.Actor
 import net.serenitybdd.screenplay.Interaction
 import net.serenitybdd.screenplay.Performable
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers
-import net.serenitybdd.screenplay.targets.Target
 import net.serenitybdd.screenplay.waits.WaitUntilTargetIsReady
 import net.thucydides.core.annotations.Step
 
