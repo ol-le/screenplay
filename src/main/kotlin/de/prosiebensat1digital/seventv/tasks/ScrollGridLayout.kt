@@ -10,7 +10,7 @@ import net.serenitybdd.screenplay.Tasks
 import net.thucydides.core.annotations.Step
 
 open class ScrollGridLayout : Task {
-    @Step("{0} Scrolls the grid layout screen down")
+    @Step("{0} scrolls the grid layout screen down")
     override fun <T : Actor> performAs(actor: T) {
         actor.attemptsTo(ScrollScrollable.forwardShort("$PACKAGE_ID:id/$GRID_RECYCLE_RESOURCE_ID"))
     }

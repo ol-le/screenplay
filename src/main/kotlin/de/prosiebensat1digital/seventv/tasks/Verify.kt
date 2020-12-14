@@ -9,7 +9,7 @@ import net.thucydides.core.annotations.Step
 import org.junit.Assert
 
 open class Verify : Task {
-    @Step("{0} Verify that number of cards is more than 20")
+    @Step("{0} verifies that number of cards is more than 20")
     override fun <T : Actor> performAs(actor: T) {
         Assert.assertTrue(GridLayoutHasMoreThan20Cards().answeredBy(actor))
     }

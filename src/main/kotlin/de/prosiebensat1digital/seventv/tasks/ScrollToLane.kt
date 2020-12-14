@@ -10,7 +10,7 @@ import net.serenitybdd.screenplay.Task
 import net.thucydides.core.annotations.Step
 
 open class ScrollToLane(var laneName: String) : Task {
-    @Step("{0} Scrolls to lane: #laneName")
+    @Step("{0} scrolls to lane: #laneName")
     override fun <T : Actor> performAs(actor: T) {
         actor.attemptsTo(ScrollScrollableToText.called("$PACKAGE_ID:id/$HOME_SCREEN_RESOURCE_ID", laneName))
     }

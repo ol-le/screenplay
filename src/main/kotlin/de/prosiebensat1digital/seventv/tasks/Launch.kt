@@ -8,7 +8,7 @@ import net.thucydides.core.annotations.Step
 
 
 open class Launch : Task {
-    @Step("{0} Launches the Joyn app")
+    @Step("{0} launches the Joyn app")
     override fun <T : Actor> performAs(actor: T) {
     }
 

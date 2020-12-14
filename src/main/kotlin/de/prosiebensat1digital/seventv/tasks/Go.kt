@@ -11,7 +11,7 @@ import net.thucydides.core.annotations.Step
 
 
 open class Go(var targetToTap: Target) : Task {
-    @Step("{0} Goes to #targetToTap")
+    @Step("{0} goes to #targetToTap")
     override fun <T : Actor> performAs(actor: T) {
         actor.attemptsTo(TapOn.the(targetToTap))
     }
@@ -25,7 +25,7 @@ open class Go(var targetToTap: Target) : Task {
             return Instrumented.instanceOf(Go::class.java).withProperties(Targets.ACCOUNT_LOGO)
         }
 
-        fun toWissenswertesAll(): Performable? {
+        fun toWorthKnowingAll(): Performable? {
             return Instrumented.instanceOf(Go::class.java).withProperties(Targets.WISSENSWERTES_ALL)
         }
 

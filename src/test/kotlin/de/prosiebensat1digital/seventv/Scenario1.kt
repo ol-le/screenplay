@@ -3,7 +3,7 @@ package de.prosiebensat1digital.seventv
 import de.prosiebensat1digital.seventv.abilities.UseAMobileDevice
 import de.prosiebensat1digital.seventv.base.BaseTest
 import de.prosiebensat1digital.seventv.base.Constants.ORIGINALS_AND_EXCLUSIVES
-import de.prosiebensat1digital.seventv.base.Constants.WISSENSWERTES
+import de.prosiebensat1digital.seventv.base.Constants.WORTH_KNOWING
 import de.prosiebensat1digital.seventv.questions.GridTitle
 import de.prosiebensat1digital.seventv.questions.HomeButton
 import de.prosiebensat1digital.seventv.questions.HomeScreen
@@ -38,9 +38,9 @@ class Scenario1 : BaseTest() {
         then(user).should(seeThat(HomeButton.selected(), `is`(true)))
         givenThat(user).attemptsTo(ScrollToLane.called(ORIGINALS_AND_EXCLUSIVES))
         then(user).should(seeThat(OriginalsAndExclusives.displayed(), `is`(true)))
-        givenThat(user).wasAbleTo(ScrollToLane.called(WISSENSWERTES))
-        then(user).attemptsTo(Go.toWissenswertesAll())
-        then(user).should(seeThat(GridTitle.text(), `is`(WISSENSWERTES)))
+        givenThat(user).wasAbleTo(ScrollToLane.called(WORTH_KNOWING))
+        then(user).attemptsTo(Go.toWorthKnowingAll())
+        then(user).should(seeThat(GridTitle.text(), `is`(WORTH_KNOWING)))
         then(user).attemptsTo(Verify.numberOfCardsIsMoreThan20())
     }
 }

@@ -20,7 +20,7 @@ open class ScrollScrollable(
 ) :
     Interaction {
 
-    @Step("{0} Scrolls the #targetToTap")
+    @Step("{0} Scrolls the #scrollableId with #scrollOrientation and #scrollDirection")
     override fun <T : Actor> performAs(actor: T) {
         val targetText = Utils.buildScrollScrollableTarget(scrollableId, scrollOrientation, scrollDirection, deadZonePercentage)
         actor.attemptsTo(WaitUntilTargetIsReady((targetText), WebElementStateMatchers.isVisible()))

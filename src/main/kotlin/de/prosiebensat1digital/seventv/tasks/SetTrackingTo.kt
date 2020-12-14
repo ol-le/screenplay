@@ -10,7 +10,7 @@ import net.serenitybdd.screenplay.targets.Target
 import net.thucydides.core.annotations.Step
 
 open class SetTrackingTo(var trackingButton : Target) : Task {
-    @Step("{0} sets tracking to off")
+    @Step("{0} sets updates tracking by clicking #trackingButton")
     override fun <T : Actor> performAs(actor: T) {
         actor.attemptsTo(TapOn(trackingButton))
     }

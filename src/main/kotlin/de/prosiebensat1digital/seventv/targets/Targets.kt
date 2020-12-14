@@ -5,7 +5,7 @@ import de.prosiebensat1digital.seventv.base.Constants.ALLE
 import de.prosiebensat1digital.seventv.base.Constants.HOME_SCREEN_RESOURCE_ID
 import de.prosiebensat1digital.seventv.base.Constants.ORIGINALS_AND_EXCLUSIVES
 import de.prosiebensat1digital.seventv.base.Constants.PACKAGE_ID
-import de.prosiebensat1digital.seventv.base.Constants.WISSENSWERTES
+import de.prosiebensat1digital.seventv.base.Constants.WORTH_KNOWING
 import de.prosiebensat1digital.seventv.base.ScrollOrientation
 import io.appium.java_client.MobileBy
 import net.serenitybdd.screenplay.targets.Target
@@ -22,17 +22,17 @@ class Targets(driver: WebDriver) : BasePage(driver) {
             .located(MobileBy.id("action_home"))!!
 
         val ORIGINALS_AND_EXCLUSIVES_TITLE =
-            Utils.buildScrollToTextTarget(HOME_SCREEN_RESOURCE_ID, ORIGINALS_AND_EXCLUSIVES, ScrollOrientation.VERTICAL)
+            Utils.buildScrollToTextTarget(HOME_SCREEN_RESOURCE_ID, ORIGINALS_AND_EXCLUSIVES, ScrollOrientation.VERTICAL)!!
 
         val WISSENSWERTES_ALL = Target.the("Wissenswertes Alle")
-            .located(MobileBy.AndroidUIAutomator("new UiSelector().text(\"$WISSENSWERTES\").fromParent(new UiSelector().text(\"$ALLE\"));"))!!
+            .located(MobileBy.AndroidUIAutomator("new UiSelector().text(\"$WORTH_KNOWING\").fromParent(new UiSelector().text(\"$ALLE\"));"))!!
 
-        val GRID_TITLE = Target.the("Grid Title").located(MobileBy.id("toolbar_title"))
+        val GRID_TITLE = Target.the("Grid Title").located(MobileBy.id("toolbar_title"))!!
 
-        val PLUS_BUTTON = Target.the("Plus button").located(MobileBy.id("action_premium"))
+        val PLUS_BUTTON = Target.the("Plus button").located(MobileBy.id("action_premium"))!!
 
         val GRID_RECYCLER_VIEW_ITEM = Target.the("Grid Recycler View Item")
-            .located(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"$PACKAGE_ID:id/series_item_container_new_metadata\");"))
+            .located(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"$PACKAGE_ID:id/series_item_container_new_metadata\");"))!!
 
         val ACCOUNT_LOGO = Target.the("Account")
             .located(MobileBy.AndroidUIAutomator("new UiSelector().description(\"account_icon_top_left\")"))!!
@@ -62,6 +62,6 @@ class Targets(driver: WebDriver) : BasePage(driver) {
             .located(MobileBy.id("view_switch_off"))!!
 
         val TRACKING_OFF_CONFIRMATION_BUTTON = Target.the("Confirm tracking disabling Button")
-            .located(MobileBy.id("info_dialog_negative_btn"))
+            .located(MobileBy.id("info_dialog_negative_btn"))!!
     }
 }
