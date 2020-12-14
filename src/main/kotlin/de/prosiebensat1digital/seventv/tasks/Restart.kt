@@ -13,8 +13,9 @@ import net.thucydides.core.webdriver.WebDriverFacade
 open class Restart : Task {
     @Step("{0} Restarts the app")
     override fun <T : Actor> performAs(actor: T) {
-        ((BrowseTheWeb.`as`(actor).driver as WebDriverFacade).proxiedDriver as AndroidDriver<*>).terminateApp(PACKAGE_ID)
-        ((BrowseTheWeb.`as`(actor).driver as WebDriverFacade).proxiedDriver as AndroidDriver<*>).activateApp(PACKAGE_ID)
+        val driver = ((BrowseTheWeb.`as`(actor).driver as WebDriverFacade).proxiedDriver as AndroidDriver<*>)
+        driver.terminateApp(PACKAGE_ID)
+        driver.activateApp(PACKAGE_ID)
     }
 
     companion object {

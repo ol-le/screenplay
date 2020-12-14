@@ -18,11 +18,11 @@ class GridLayoutHasMoreThan20Cards : Question<Boolean> {
             if (result.containsAll(scrolledList))
                 return false
             else {
-                result = result.union(scrolledList)
+                result += result.union(scrolledList)
             }
         }
         Serenity.recordReportData().withTitle("Found Cards Titles").andContents(
-            result.toTypedArray().contentToString()
+            printSetWithIndexes(result)
         )
         return true
     }
@@ -31,12 +31,11 @@ class GridLayoutHasMoreThan20Cards : Question<Boolean> {
         return elements.map { (it::getAttribute)("content-desc") }
     }
 
-    fun <T> mergeSets(first: Set<T>, second: Set<T>): HashSet<T> {
-        return object : HashSet<T>() {
-            init {
-                addAll(first)
-                addAll(second)
-            }
+    private fun printSetWithIndexes(set: Set<String>): String {
+        var res = ""
+        set.forEachIndexed { index, element ->
+            res += "$index.$element\n"
         }
+        return res
     }
 }
