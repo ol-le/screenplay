@@ -73,7 +73,7 @@ Clone the repo
 ### Execution
  Execute the tests with the next command
    ```sh
-   ./gradlew test aggregate
+   ./gradlew test
             -Dappium.hub={APPIUM_SERVER_URL}
             -Dwebdriver.driver=appium
             -Dappium.platformName=ANDROID
@@ -82,7 +82,7 @@ Clone the repo
             -Dappium.platformVersion={PLATFORM_VERSION}
             -Dappium.app={FULL_PATH_TO_APK}
             -Dwebdriver.timeouts.implicitlywait=10000
-            -Dorg.slf4j.simpleLogger.defaultLogLevel=info
+            -Dorg.slf4j.simpleLogger.defaultLogLevel=debug
    ```
 
 
