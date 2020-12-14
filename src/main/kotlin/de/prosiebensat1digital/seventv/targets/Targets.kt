@@ -22,7 +22,7 @@ class Targets(driver: WebDriver) : BasePage(driver) {
             .located(MobileBy.id("action_home"))!!
 
         val ORIGINALS_AND_EXCLUSIVES_TITLE =
-            Utils.buildScrollToTextTarget(HOME_SCREEN_RESOURCE_ID, ORIGINALS_AND_EXCLUSIVES, ScrollOrientation.VERTICAL)!!
+            Utils.buildScrollToTextTarget(HOME_SCREEN_RESOURCE_ID, ORIGINALS_AND_EXCLUSIVES, ScrollOrientation.VERTICAL)
 
         val WISSENSWERTES_ALL = Target.the("Wissenswertes Alle")
             .located(MobileBy.AndroidUIAutomator("new UiSelector().text(\"$WORTH_KNOWING\").fromParent(new UiSelector().text(\"$ALLE\"));"))!!

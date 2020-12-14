@@ -1,5 +1,8 @@
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+
 buildscript {
-    project.ext{
+    project.ext {
         serenityVersion = '2.3.9'
     }
 
@@ -42,4 +45,42 @@ dependencies {
 repositories {
     mavenCentral()
     jcenter()
+}
+
+tasks.withType(Test) {
+    systemProperty "webdriver.driver", System.getProperty("webdriver.driver")
+    systemProperty "appium.hub", System.getProperty("appium.hub")
+    systemProperty "appium.platformName", System.getProperty("appium.platformName")
+    systemProperty "appium.platformVersion", System.getProperty("appium.platformVersion")
+    systemProperty "appium.deviceName", System.getProperty("appium.deviceName")
+    systemProperty "appium.automationName", System.getProperty("appium.automationName")
+    systemProperty "appium.app", System.getProperty("appium.app")
+    systemProperty "org.slf4j.simpleLogger.defaultLogLevel", System.getProperty("org.slf4j.simpleLogger.defaultLogLevel")
+    systemProperty "webdriver.timeouts.implicitlywait", System.getProperty("webdriver.timeouts.implicitlywait")
+    testLogging {
+        events TestLogEvent.FAILED,
+                TestLogEvent.PASSED,
+                TestLogEvent.SKIPPED,
+                TestLogEvent.STARTED,
+                TestLogEvent.STANDARD_OUT,
+                TestLogEvent.STANDARD_ERROR
+        exceptionFormat TestExceptionFormat.FULL
+        showCauses true
+        showExceptions true
+        showStackTraces true
+    }
+
+    testLogging {
+        events TestLogEvent.FAILED,
+                TestLogEvent.PASSED,
+                TestLogEvent.SKIPPED,
+                TestLogEvent.STARTED,
+                TestLogEvent.STANDARD_OUT,
+                TestLogEvent.STANDARD_ERROR
+        exceptionFormat TestExceptionFormat.FULL
+        showCauses true
+        showExceptions true
+        showStackTraces true
+    }
+    finalizedBy aggregate
 }
