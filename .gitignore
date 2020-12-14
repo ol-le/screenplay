@@ -4,3 +4,6 @@ build/
 target/
 history
 local.properties
+*.iml
+*.ipr
+*.iws
