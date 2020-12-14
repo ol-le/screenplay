@@ -2,7 +2,7 @@
 .gradle/
 build/
 target/
-history
+history/
 local.properties
 *.iml
 *.ipr

@@ -12,7 +12,7 @@ class GridLayoutHasMoreThan20Cards : Question<Boolean> {
 
     override fun answeredBy(actor: Actor): Boolean {
         var result = getContentDescList(Targets.GRID_RECYCLER_VIEW_ITEM.resolveAllFor(actor)).toSet()
-        while (result.size < 20) {
+        while (result.size < 21) {
             actor.attemptsTo(SilentTask.where(ScrollGridLayout.down()))
             val scrolledList = getContentDescList(Targets.GRID_RECYCLER_VIEW_ITEM.resolveAllFor(actor)).toSet()
             if (result.containsAll(scrolledList))
