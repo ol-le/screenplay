@@ -2,21 +2,22 @@ package de.prosiebensat1digital.seventv.tasks
 
 import de.prosiebensat1digital.seventv.interactions.TapOn
 import de.prosiebensat1digital.seventv.targets.Targets
+import net.serenitybdd.core.steps.Instrumented
 import net.serenitybdd.screenplay.Actor
 import net.serenitybdd.screenplay.Performable
 import net.serenitybdd.screenplay.Task
-import net.serenitybdd.screenplay.Tasks
+import net.serenitybdd.screenplay.targets.Target
 import net.thucydides.core.annotations.Step
 
-open class Confirm: Task {
-    @Step("{0} confirms tracking disabling")
+open class SetTracking(var trackingButton : Target) : Task {
+    @Step("{0} sets updates tracking by clicking #trackingButton")
     override fun <T : Actor> performAs(actor: T) {
-        actor.attemptsTo(TapOn(Targets.TRACKING_OFF_CONFIRMATION_BUTTON))
+        actor.attemptsTo(TapOn(trackingButton))
     }
 
     companion object {
-        fun trackingDisabling(): Performable {
-            return Tasks.instrumented(Confirm::class.java)
+        fun toOff(): Performable {
+            return Instrumented.instanceOf(SetTracking::class.java).withProperties(Targets.TRACKING_OFF)
         }
     }
 }

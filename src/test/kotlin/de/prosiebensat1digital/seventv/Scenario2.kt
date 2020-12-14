@@ -26,15 +26,15 @@ class Scenario2 : BaseTest() {
 
     @Test
     fun should_save_tracking_toggle_after_restart() {
-        givenThat(user).wasAbleTo(Launch.theApp())
+        givenThat(user).wasAbleTo(LaunchTheApp())
         navigateToTracking()
         then(user).should(seeThat(Tracking.isOn(), Matchers.`is`(true)))
         then(user).attemptsTo(
-            SetTrackingTo.off(),
-            Confirm.trackingDisabling()
+            SetTracking.toOff(),
+            ConfirmTrackingDisabling()
         )
         then(user).should(seeThat(Tracking.isOff(), Matchers.`is`(true)))
-        givenThat(user).attemptsTo(Restart.theApp())
+        givenThat(user).attemptsTo(RestartTheApp())
         navigateToTracking()
         then(user).should(seeThat(Tracking.isOff(), Matchers.`is`(true)))
     }
