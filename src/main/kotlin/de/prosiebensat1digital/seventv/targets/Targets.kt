@@ -32,7 +32,7 @@ class Targets(driver: WebDriver) : BasePage(driver) {
         val PLUS_BUTTON = Target.the("Plus button").located(MobileBy.id("action_premium"))!!
 
         val GRID_RECYCLER_VIEW_ITEM = Target.the("Grid Recycler View Item")
-            .located(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"$PACKAGE_ID:id/series_item_container_new_metadata\");"))!!
+            .located(MobileBy.AndroidUIAutomator("new UiSelector().resourceIdMatches(\".*:id/series_item_container.*\");"))!!
 
         val ACCOUNT_LOGO = Target.the("Account")
             .located(MobileBy.AndroidUIAutomator("new UiSelector().description(\"account_icon_top_left\")"))!!
