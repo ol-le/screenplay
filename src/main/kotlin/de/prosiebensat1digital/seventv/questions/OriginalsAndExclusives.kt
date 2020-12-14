@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.questions.Attribute
 
 class OriginalsAndExclusives {
     companion object {
-        fun displayed(): Question<Boolean> {
+        fun isDisplayed(): Question<Boolean> {
             return Attribute.of(Targets.ORIGINALS_AND_EXCLUSIVES_TITLE)
                 .named("displayed")
                 .describedAs("Originals & Exclusives is displayed")

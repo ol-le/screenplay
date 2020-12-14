@@ -4,12 +4,12 @@ import de.prosiebensat1digital.seventv.targets.Targets
 import net.serenitybdd.screenplay.Question
 import net.serenitybdd.screenplay.questions.Attribute
 
-class HomeScreen {
+class FeedbackButton {
     companion object {
         fun isDisplayed(): Question<Boolean> {
-            return Attribute.of(Targets.SUSHI_BAR_RECYCLE_VIEW)
+            return Attribute.of(Targets.SEND_FEEDBACK_BUTTON)
                 .named("displayed")
-                .describedAs("Home Screen is displayed")
+                .describedAs("Feedback button is displayed")
                 .asABoolean()
         }
     }

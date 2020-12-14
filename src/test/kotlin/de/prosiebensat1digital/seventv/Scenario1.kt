@@ -32,15 +32,15 @@ class Scenario1 : BaseTest() {
     @Test
     fun should_display_more_than_20_cards_in_a_gridview() {
         givenThat(user).wasAbleTo(Launch.theApp())
-        then(user).should(seeThat(HomeScreen.displayed(), `is`(true)))
+        then(user).should(seeThat(HomeScreen.isDisplayed(), `is`(true)))
         then(user).attemptsTo(ScrollHomeScreen.down())
         givenThat(user).wasAbleTo(Go.toHomeScreen())
-        then(user).should(seeThat(HomeButton.selected(), `is`(true)))
+        then(user).should(seeThat(HomeButton.isSelected(), `is`(true)))
         givenThat(user).attemptsTo(ScrollToLane.called(ORIGINALS_AND_EXCLUSIVES))
-        then(user).should(seeThat(OriginalsAndExclusives.displayed(), `is`(true)))
+        then(user).should(seeThat(OriginalsAndExclusives.isDisplayed(), `is`(true)))
         givenThat(user).wasAbleTo(ScrollToLane.called(WORTH_KNOWING))
         then(user).attemptsTo(Go.toWorthKnowingAll())
-        then(user).should(seeThat(GridTitle.text(), `is`(WORTH_KNOWING)))
+        then(user).should(seeThat(GridTitle.hasText(), `is`(WORTH_KNOWING)))
         then(user).attemptsTo(Verify.numberOfCardsIsMoreThan20())
     }
 }

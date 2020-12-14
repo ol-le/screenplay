@@ -8,7 +8,7 @@ import net.serenitybdd.screenplay.questions.Attribute
 @Subject("Home Button is selected")
 class HomeButton {
     companion object {
-        fun selected(): Question<Boolean> {
+        fun isSelected(): Question<Boolean> {
             return Attribute.of(Targets.HOME_BUTTON)
                 .named("selected")
                 .describedAs("Home Screen Home Button is selected")

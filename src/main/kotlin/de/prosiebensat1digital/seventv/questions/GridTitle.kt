@@ -8,7 +8,7 @@ import net.serenitybdd.screenplay.questions.Attribute
 @Subject("Grid title is ")
 class GridTitle {
     companion object {
-        fun text(): Question<String> {
+        fun hasText(): Question<String> {
             return Attribute.of(Targets.GRID_TITLE)
                 .named("text")
                 .describedAs("Grid title text")
